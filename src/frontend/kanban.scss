@@ -1,0 +1,51 @@
+$bigFont: 28px;
+$mediumFont: 22px;
+$smallFont: 16px;
+
+* {
+    font-family: -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Noto Sans", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-size: 16px;
+}
+
+// Font sizing 
+.bigFont { font-size: $bigFont; }
+.mediumFont { font-size: $mediumFont }
+.smallFont { font-size: $smallFont }
+
+// Kanban styling 
+.list {
+    display: inline-block;
+
+    width: 300px;
+    height: auto;
+
+    padding: 15px;
+
+    background-color: #333333;
+
+    .card {
+        display: block;
+    
+        width: auto;
+        height: auto;
+    
+        margin: 10px 0;
+        padding: 10px;
+    
+        background-color: #000000;
+        color: white;
+    
+        .cardBottomContent
+        {
+            margin-top: 5px;
+    
+            display: block;
+            text-align: right;
+    
+            .cardDueDate {
+                right: 15px;
+                bottom: 15px;
+            }
+        }
+    }
+}
