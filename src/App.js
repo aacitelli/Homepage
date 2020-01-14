@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Kanban from "./frontend/kanban";
+import Calendar from "./frontend/calendar";
 import "./universal.css";
 
 export default function App() {
@@ -8,6 +9,14 @@ export default function App() {
     <Router>
       <div>
         <Switch>
+          <Route exact path="/k">
+            <Kanban />
+          </Route>
+
+          <Route exact path="/c">
+            <Calendar /> 
+          </Route>
+
           <Route path="/">
             <Kanban />
           </Route>
