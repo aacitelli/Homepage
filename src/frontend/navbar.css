@@ -1,0 +1,32 @@
+nav {
+  position: relative;
+  height: 50px;
+  background-color: black;
+  color: white;
+  font-size: 36px;
+}
+
+nav #calendarButtonContainer {
+  height: 50px;
+  background-color: #333333;
+  padding: 0 20px;
+}
+
+nav #calendarButtonContainer p {
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+  margin: 0 auto;
+  line-height: 50px;
+}
+
+nav .navbarLeftContent {
+  position: absolute;
+  left: 0;
+}
+
+nav .navbarRightContent {
+  position: absolute;
+  right: 0;
+}
+/*# sourceMappingURL=navbar.css.map */
