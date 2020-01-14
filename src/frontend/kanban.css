@@ -17,9 +17,9 @@
 
 .list {
   display: inline-block;
-  width: 300px;
+  width: 250px;
   height: auto;
-  padding: 15px;
+  padding: 10px;
   background-color: #333333;
   color: white;
 }
@@ -43,5 +43,11 @@
 .list .card .cardBottomContent .cardDueDate {
   right: 15px;
   bottom: 15px;
+}
+
+#wrapper {
+  padding: 10px;
+  background-color: #666666;
+  height: calc(100vh - 70px);
 }
 /*# sourceMappingURL=kanban.css.map */
