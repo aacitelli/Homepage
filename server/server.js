@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 
 // Set up database connection w/ error handlers
 require("dotenv").config({ path: "server/.env" });
-mongoose.connect("mongodb+srv://" + process.env.DB_USER + ":" + process.env.DB_PASS + "@homepage-nwxpq.mongodb.net/test?retryWrites=true&w=majority", { useNewUrlParser: true });
+mongoose.connect("mongodb+srv://" + process.env.DB_USER + ":" + process.env.DB_PASS + "@homepage-nwxpq.mongodb.net/test?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true });
 var db = mongoose.connection;
 db.on("error", console.error.bind(console, "MongoDB Connection Error: "));
 db.on("connected", console.log.bind(console, "Successfully Connected to MongoDB Database!"));
@@ -21,6 +21,16 @@ app.post("/api/kanban/board", function(req, res) {
      
 });
 
+// Add List to Board 
+app.post("/api/kanban/list", function(req, res) {
+
+});
+
+// Add Task to List 
+app.post("/api/kanban/task", function(req, res) {
+
+});
+
 //! READ Operations
 // Read Board 
 app.get("/api/kanban/board", function(req, res) {
@@ -28,29 +38,20 @@ app.get("/api/kanban/board", function(req, res) {
 });
 
 //! UPDATE operations 
-// Add List to Board 
-app.put("/api/kanban/list", function(req, res) {
-
-});
-
-// Add Task to List 
-app.put("/api/kanban/task", function(req, res) {
-
-});
-
-// Delete List from Board 
-app.put("/api/kanban/list", function(req, res) {
-
-});
-
-// Delete Task from List 
-app.put("/api/kanban/task", function(req, res) {
-
-});
 
 //! DELETE operations
 // Delete Board 
 app.delete("/api/kanban/board", function(req, res) {
+
+});
+
+// Delete List from Board 
+app.delete("/api/kanban/list", function(req, res) {
+
+});
+
+// Delete Task from List 
+app.delete("/api/kanban/task", function(req, res) {
 
 });
 

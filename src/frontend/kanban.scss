@@ -64,4 +64,8 @@ $pageBackgroundColor: #666666;
 
     // TODO: Figure out why this is 70px and not 50px like I'd expect 
     height: calc(100vh - 70px);
+
+    button {
+        display: block;
+    }
 }

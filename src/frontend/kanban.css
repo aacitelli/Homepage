@@ -51,4 +51,8 @@
   background-color: #666666;
   height: calc(100vh - 70px);
 }
+
+#wrapper button {
+  display: block;
+}
 /*# sourceMappingURL=kanban.css.map */
