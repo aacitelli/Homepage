@@ -15,15 +15,21 @@ var db = mongoose.connection;
 db.on("error", console.error.bind(console, "MongoDB Connection Error: "));
 db.on("connected", console.log.bind(console, "Successfully Connected to MongoDB Database!"));
 
+// Import necessary Schemas 
+const Board = require("./schemas/Board");
+
 //! CREATE operations
 // Add Board 
 app.post("/api/kanban/board", function(req, res) {
-     
+    const NewBoardObject = new Board(req.body);
+    NewBoardObject.save(err => {
+        if (err) return res.status(500).send(err); 
+        return res.status(200).send(NewBoard);
+    });
 });
 
 // Add List to Board 
 app.post("/api/kanban/list", function(req, res) {
-
 });
 
 // Add Task to List 
