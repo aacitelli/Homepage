@@ -6,6 +6,7 @@ const mongoose = require("mongoose");
 // Set up express 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 // Set up database connection w/ error handlers
 require("dotenv").config({ path: "server/.env" });
@@ -15,17 +16,43 @@ db.on("error", console.error.bind(console, "MongoDB Connection Error: "));
 db.on("connected", console.log.bind(console, "Successfully Connected to MongoDB Database!"));
 
 //! CREATE operations
-// Add list 
-// Add task to list
+// Add Board 
+app.post("/api/kanban/board", function(req, res) {
+     
+});
 
 //! READ Operations
+// Read Board 
+app.get("/api/kanban/board", function(req, res) {
+
+});
 
 //! UPDATE operations 
-// Change text of task 
+// Add List to Board 
+app.put("/api/kanban/list", function(req, res) {
+
+});
+
+// Add Task to List 
+app.put("/api/kanban/task", function(req, res) {
+
+});
+
+// Delete List from Board 
+app.put("/api/kanban/list", function(req, res) {
+
+});
+
+// Delete Task from List 
+app.put("/api/kanban/task", function(req, res) {
+
+});
 
 //! DELETE operations
-// Delete list 
-// Delete task from list 
+// Delete Board 
+app.delete("/api/kanban/board", function(req, res) {
+
+});
 
 // Physically start up backend server 
 app.listen(3001, () => {

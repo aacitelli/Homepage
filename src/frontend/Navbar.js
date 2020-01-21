@@ -9,8 +9,8 @@ export default function Navbar(props) {
 
     return (
         <nav>
-            <div class="navbarLeftContent"></div>
-            <div class="navbarRightContent">
+            <div className="navbarLeftContent"></div>
+            <div className="navbarRightContent">
                 <Link to={buttonLink}>
                     <div id="calendarButtonContainer">
                         <p>{buttonText}</p>
